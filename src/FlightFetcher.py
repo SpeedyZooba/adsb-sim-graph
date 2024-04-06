@@ -9,7 +9,7 @@ def getFlightsByBounds(latitude: float, longitude: float, radius: float):
         if (len(aircrafts) == 0):
             return flights
         for aircraft in aircrafts:
-            if ('lat' in aircraft and 'lon' in aircraft and 'alt_geom' in aircraft):
+            if ('lat' in aircraft and 'lon' in aircraft):
                 flight = Plane(aircraft['hex'], aircraft['lat'], aircraft['lon'], 0)
                 flights.append(flight)
         return flights
