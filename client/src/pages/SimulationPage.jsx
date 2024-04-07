@@ -5,7 +5,7 @@ import ModificationComponent from '../components/ModificationComponent';
 
 const SimulationPage = ({disabled, preSettingsValue, changeSettings, 
   toggleDisabled, changePreSettingsText, currentString, 
-  handleData, handleOpcode, opcode, handleLiveData, handleTime, time, data, liveData}) => {
+  handleData, handleOpcode, opcode }) => {
     
     const [latitudeRangeSlider, setLatitudeRangeSlider] = useState(0)
     const [longitudeSliderValue, setLongitudeSliderValue] = useState(0)
@@ -84,8 +84,8 @@ const SimulationPage = ({disabled, preSettingsValue, changeSettings,
             <div className="MapContainer">
               <div className="MapBorder">
                 <MapComponent baseRange={baseRange} baseLat={baseLatitude} flightName={flightName} startSim={startSim}
-                baseLong={baseLongitude} opcode={opcode} reset={resetData} handleLiveData={handleLiveData}
-                latSlide={latitudeRangeSlider} longSlide={longitudeSliderValue} handleData={handleData} handleTime={handleTime}/>
+                baseLong={baseLongitude} opcode={opcode} reset={resetData} 
+                latSlide={latitudeRangeSlider} longSlide={longitudeSliderValue} handleData={handleData} />
               </div>
             </div>
         </div>

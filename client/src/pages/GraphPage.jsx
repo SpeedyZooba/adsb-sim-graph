@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 
-const GraphPage = ({data, opcode, liveData, time}) => {
+const GraphPage = ({ data, opcode }) => {
     
     const [liveDataWithId, setLiveDataWithId] = useState([])
     const [dataWithId, setDataWithId] = useState([])
@@ -60,8 +60,6 @@ const GraphPage = ({data, opcode, liveData, time}) => {
       }
 
       setRange(calculateRange())
-
-      console.log(dataWithId)
     },[dataWithId])
     
     const formatTick = (value) => value.toFixed(1);

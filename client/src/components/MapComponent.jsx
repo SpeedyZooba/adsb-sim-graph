@@ -115,7 +115,7 @@ const MapComponent = ({opcode ,baseRange, baseLat, baseLong, latSlide,
                     setModified(secondHalf)
                     updateFeatures(geojsonFeatures);
                 } catch (err) {
-                    //console.error("Error While Getting Data", err);
+                    console.error("Error While Getting Data", err);
                 }
             }
             
@@ -125,8 +125,6 @@ const MapComponent = ({opcode ,baseRange, baseLat, baseLong, latSlide,
                 try {
                     const response = await axios.post(requestString);
                     const data = response.data.flights;
-                    
-                    //handleTime(elapsedTime)
 
                     const geojsonFeatures = data.flatMap(flightGroup => {
                         return flightGroup.map(segment => {
@@ -153,7 +151,7 @@ const MapComponent = ({opcode ,baseRange, baseLat, baseLong, latSlide,
                     setModified(secondHalf)
                     updateFeatures(geojsonFeatures);
                 } catch (err) {
-                    //console.error("Error While Getting Data", err);
+                    console.error("Error While Getting Data", err);
                 }
             }
         };
